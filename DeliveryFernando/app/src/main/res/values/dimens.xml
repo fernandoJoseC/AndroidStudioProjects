@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="top_border">120dip</dimen>
+    <dimen name="border_left_right">20dip</dimen>
+    <dimen name="text_height">24dip</dimen>
+</resources>
