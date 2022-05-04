@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DeliveryFernando</string>
+    <string name="app_name">Loggin Practice</string>
     <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="login">Entrar</string>

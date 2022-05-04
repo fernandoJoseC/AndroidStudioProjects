@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,12 +12,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/border_left_right"
-        android:layout_marginTop="@dimen/top_border"
+        android:layout_marginTop="@dimen/top_border2"
         android:layout_marginRight="@dimen/border_left_right"
         android:text="@string/main_login"
         android:textColor="@color/black"
         android:textSize="@dimen/text_height"
         app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/text_user_label2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/border_left_right"
+        android:layout_marginTop="@dimen/top_border"
+        android:layout_marginRight="@dimen/border_left_right"
+        android:text="@string/user"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_height"
+        android:background="@drawable/contorno"
+        app:layout_constraintLeft_toLeftOf="@id/text_user_label"
+        app:layout_constraintRight_toRightOf="@id/text_user_label"
+        app:layout_constraintTop_toBottomOf="@id/text_user_label"
 
         />
 
@@ -27,10 +45,26 @@
         android:layout_marginTop="@dimen/text_height"
         android:ems="10"
         android:hint="@string/user"
-        android:inputType="textPersonName"
-        app:layout_constraintLeft_toLeftOf="@id/text_user_label"
-        app:layout_constraintRight_toRightOf="@id/text_user_label"
-        app:layout_constraintTop_toBottomOf="@id/text_user_label"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="@id/text_user_label2"
+        app:layout_constraintRight_toRightOf="@id/text_user_label2"
+        app:layout_constraintTop_toBottomOf="@id/text_user_label2"
+
+        />
+
+    <TextView
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/border_left_right"
+        android:layout_marginTop="@dimen/top_border"
+        android:layout_marginRight="@dimen/border_left_right"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_height"
+        app:layout_constraintLeft_toLeftOf="@id/editTextTextPersonName"
+        app:layout_constraintRight_toRightOf="@id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName"
 
         />
 
@@ -42,9 +76,9 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        app:layout_constraintLeft_toLeftOf="@id/text_user_label"
-        app:layout_constraintRight_toRightOf="@id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName"
+        app:layout_constraintLeft_toLeftOf="@id/text_user_label2"
+        app:layout_constraintRight_toRightOf="@id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName2"
 
         />
 
@@ -53,12 +87,37 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
+        android:background="@drawable/contorno"
         android:text="@string/login"
         app:layout_constraintLeft_toLeftOf="@id/text_user_label"
         app:layout_constraintRight_toRightOf="@id/editTextTextPassword"
         app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
 
         />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_height"
+        android:text="¿Tienes problemas para iniciar sesión?"
+        android:textColor="#FF6200EE"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="@id/button"
+        app:layout_constraintRight_toRightOf="@id/button"
+        app:layout_constraintTop_toBottomOf="@id/button" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/password"
+        android:src="@drawable/ic_baseline_vpn_key_24"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="UseAppTint" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
