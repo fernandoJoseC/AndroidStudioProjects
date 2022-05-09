@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,9 +14,11 @@
         android:layout_marginTop="@dimen/top_border2"
         android:layout_marginRight="@dimen/border_left_right"
         android:text="@string/main_login"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_height"
+        android:textSize="@dimen/text_title"
         app:layout_constraintTop_toTopOf="parent"
+
 
         />
 
@@ -28,29 +29,29 @@
         android:layout_marginLeft="@dimen/border_left_right"
         android:layout_marginTop="@dimen/top_border"
         android:layout_marginRight="@dimen/border_left_right"
+        android:paddingLeft="10dp"
         android:text="@string/user"
         android:textColor="@color/black"
         android:textSize="@dimen/text_height"
-        android:background="@drawable/contorno"
         app:layout_constraintLeft_toLeftOf="@id/text_user_label"
         app:layout_constraintRight_toRightOf="@id/text_user_label"
-        app:layout_constraintTop_toBottomOf="@id/text_user_label"
 
-        />
+        app:layout_constraintTop_toBottomOf="@id/text_user_label" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="@string/user"
         android:inputType="textPassword"
         app:layout_constraintLeft_toLeftOf="@id/text_user_label2"
         app:layout_constraintRight_toRightOf="@id/text_user_label2"
-        app:layout_constraintTop_toBottomOf="@id/text_user_label2"
 
-        />
+        app:layout_constraintTop_toBottomOf="@id/text_user_label2" />
 
     <TextView
         android:id="@+id/editTextTextPersonName2"
@@ -59,36 +60,42 @@
         android:layout_marginLeft="@dimen/border_left_right"
         android:layout_marginTop="@dimen/top_border"
         android:layout_marginRight="@dimen/border_left_right"
+        android:paddingLeft="10dp"
         android:text="@string/password"
         android:textColor="@color/black"
         android:textSize="@dimen/text_height"
         app:layout_constraintLeft_toLeftOf="@id/editTextTextPersonName"
         app:layout_constraintRight_toRightOf="@id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName"
 
-        />
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
+        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:padding="10dp"
         app:layout_constraintLeft_toLeftOf="@id/text_user_label2"
         app:layout_constraintRight_toRightOf="@id/editTextTextPersonName2"
         app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName2"
 
         />
 
+
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
-        android:background="@drawable/contorno"
+        android:background="@drawable/contorno_buttom"
         android:text="@string/login"
+        android:textColor="#FF6200EE"
+        android:textSize="@dimen/text_button"
         app:layout_constraintLeft_toLeftOf="@id/text_user_label"
         app:layout_constraintRight_toRightOf="@id/editTextTextPassword"
         app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
@@ -101,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
         android:text="¿Tienes problemas para iniciar sesión?"
+        android:textAlignment="center"
         android:textColor="#FF6200EE"
         android:textStyle="italic"
         app:layout_constraintLeft_toLeftOf="@id/button"
