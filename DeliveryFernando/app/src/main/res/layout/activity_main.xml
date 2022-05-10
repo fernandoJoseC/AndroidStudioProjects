@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <!--android:background="@drawable/linear"-->
+
 
     <TextView
         android:id="@+id/text_user_label"
@@ -92,9 +94,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
-        android:background="@drawable/contorno_buttom"
+        android:background="@drawable/contorno"
         android:text="@string/login"
-        android:textColor="#FF6200EE"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_button"
         app:layout_constraintLeft_toLeftOf="@id/text_user_label"
         app:layout_constraintRight_toRightOf="@id/editTextTextPassword"
@@ -109,7 +111,7 @@
         android:layout_marginTop="@dimen/text_height"
         android:text="¿Tienes problemas para iniciar sesión?"
         android:textAlignment="center"
-        android:textColor="#FF6200EE"
+        android:textColor="@color/black"
         android:textStyle="italic"
         app:layout_constraintLeft_toLeftOf="@id/button"
         app:layout_constraintRight_toRightOf="@id/button"
