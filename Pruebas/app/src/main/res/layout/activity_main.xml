@@ -34,20 +34,46 @@
                 />
 
             <EditText
+
                 android:id="@+id/text_input"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/the_inputs"
                 android:layout_marginTop="@android:dimen/app_icon_size"
                 android:background="@color/white"
                 android:hint="@android:string/copyUrl"
                 android:inputType="textUri"
                 android:textColorHint="@android:color/holo_blue_light"
                 android:textSize="@android:dimen/app_icon_size"
-                app:layout_constraintLeft_toLeftOf="@+id/name_aplication"
-                app:layout_constraintRight_toRightOf="@+id/name_aplication"
                 app:layout_constraintTop_toBottomOf="@+id/name_aplication"
 
+
                 />
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/the_passwords"
+                android:id="@+id/password"
+                android:hint="@string/app_name"
+                android:textColorHint="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/button"
+                app:startIconContentDescription="@android:string/copyUrl"
+                app:startIconDrawable="@drawable/ic_launcher_foreground"
+
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+
+                    >
+
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/button"
@@ -55,10 +81,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@android:dimen/app_icon_size"
                 android:text="@android:string/ok"
+                android:textSize="@android:dimen/app_icon_size"
                 app:layout_constraintLeft_toLeftOf="@+id/name_aplication"
                 app:layout_constraintRight_toRightOf="@+id/name_aplication"
                 app:layout_constraintTop_toBottomOf="@+id/text_input"
-                android:textSize="@android:dimen/app_icon_size"
 
                 />
 
