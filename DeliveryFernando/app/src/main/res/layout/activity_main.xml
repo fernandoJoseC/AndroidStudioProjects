@@ -15,12 +15,12 @@
         android:layout_marginLeft="@dimen/border_left_right"
         android:layout_marginTop="@dimen/top_border2"
         android:layout_marginRight="@dimen/border_left_right"
-        android:text="@string/main_login"
+        android:text="@string/main"
         android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/black"
         android:textSize="@dimen/text_title"
         app:layout_constraintTop_toTopOf="parent"
-
 
         />
 
@@ -31,13 +31,12 @@
         android:layout_marginLeft="@dimen/border_left_right"
         android:layout_marginTop="@dimen/top_border"
         android:layout_marginRight="@dimen/border_left_right"
-        android:paddingLeft="10dp"
+        android:paddingLeft="20dp"
         android:text="@string/user"
-        android:textColor="@color/black"
+        android:textColor="@color/gris2"
         android:textSize="@dimen/text_height"
         app:layout_constraintLeft_toLeftOf="@id/text_user_label"
         app:layout_constraintRight_toRightOf="@id/text_user_label"
-
         app:layout_constraintTop_toBottomOf="@id/text_user_label" />
 
     <EditText
@@ -45,14 +44,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
-        android:drawableLeft="@drawable/ic_user"
-        android:drawablePadding="10dp"
-        android:ems="10"
+        android:background="@drawable/contorno2"
+        android:drawableRight="@drawable/ic_user"
         android:hint="@string/user"
-        android:inputType="textPassword"
+        android:inputType="textUri"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+
         app:layout_constraintLeft_toLeftOf="@id/text_user_label2"
         app:layout_constraintRight_toRightOf="@id/text_user_label2"
-
         app:layout_constraintTop_toBottomOf="@id/text_user_label2" />
 
     <TextView
@@ -62,13 +62,12 @@
         android:layout_marginLeft="@dimen/border_left_right"
         android:layout_marginTop="@dimen/top_border"
         android:layout_marginRight="@dimen/border_left_right"
-        android:paddingLeft="10dp"
+        android:paddingLeft="20dp"
         android:text="@string/password"
-        android:textColor="@color/black"
+        android:textColor="@color/gris2"
         android:textSize="@dimen/text_height"
         app:layout_constraintLeft_toLeftOf="@id/editTextTextPersonName"
         app:layout_constraintRight_toRightOf="@id/editTextTextPersonName"
-
         app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName" />
 
     <EditText
@@ -76,12 +75,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
-        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
-        android:drawablePadding="10dp"
-        android:ems="10"
+        android:background="@drawable/contorno2"
+        android:drawableRight="@drawable/ic_baseline_vpn_key_24"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         app:layout_constraintLeft_toLeftOf="@id/text_user_label2"
         app:layout_constraintRight_toRightOf="@id/editTextTextPersonName2"
         app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName2"
@@ -96,13 +95,12 @@
         android:layout_marginTop="@dimen/text_height"
         android:background="@drawable/contorno"
         android:text="@string/login"
-        android:textColor="@color/white"
+        android:textColor="@color/gris1"
         android:textSize="@dimen/text_button"
-        app:layout_constraintLeft_toLeftOf="@id/text_user_label"
+        app:layout_constraintLeft_toLeftOf="@id/text_user_label2"
         app:layout_constraintRight_toRightOf="@id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword" />
 
-        />
 
     <TextView
         android:id="@+id/textView2"
@@ -110,24 +108,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_height"
         android:text="¿Tienes problemas para iniciar sesión?"
-        android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textAlignment="textEnd"
+        android:textColor="@color/gris2"
         android:textStyle="italic"
+
         app:layout_constraintLeft_toLeftOf="@id/button"
         app:layout_constraintRight_toRightOf="@id/button"
         app:layout_constraintTop_toBottomOf="@id/button" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:contentDescription="@string/password"
-        android:src="@drawable/ic_baseline_vpn_key_24"
-        android:tint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:ignore="UseAppTint" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

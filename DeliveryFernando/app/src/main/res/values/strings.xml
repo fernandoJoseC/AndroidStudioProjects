@@ -3,6 +3,6 @@
     <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="login">Entrar</string>
-    <string name="main_login">Iniciar sesión</string>
+    <string name="main">Iniciar sesión</string>
     
 </resources>
