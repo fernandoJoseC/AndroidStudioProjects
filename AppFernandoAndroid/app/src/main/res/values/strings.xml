@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Loggin Practice</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Entrar</string>
+    <string name="main">Iniciar sesión</string>
+    
+</resources>
