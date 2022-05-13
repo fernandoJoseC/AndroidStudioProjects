@@ -9,6 +9,7 @@
     <dimen name="text_button">20dip</dimen>
     <dimen name="top_button">80dip</dimen>
     <dimen name="top_button2">90dip</dimen>
+    <dimen name="top_text">110dip</dimen>
 
 
 </resources>

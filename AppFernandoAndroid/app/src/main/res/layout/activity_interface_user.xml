@@ -2,8 +2,57 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/layout"
+    android:background="@drawable/ic_interface_user"
     tools:context=".interface_user.interface_user">
+
+    <ScrollView
+        style="@style/layout"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_label"
+                style="@style/layout_label"
+                android:layout_marginLeft="@dimen/border_left_right"
+                android:layout_marginTop="@dimen/top_border2"
+                android:layout_marginRight="@dimen/border_left_right"
+                android:background="@drawable/contorno2"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:text="@string/user"
+                android:textColor="@color/gris2"
+                android:textSize="@dimen/text_height"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_label"
+                style="@style/layout_edit"
+                android:layout_marginTop="@dimen/text_height"
+                android:background="@drawable/contorno2"
+                android:hint="@string/name_user"
+                android:textColorHint="@color/gris2"
+                app:layout_constraintLeft_toLeftOf="@+id/user_label"
+                app:layout_constraintRight_toRightOf="@+id/user_label"
+                app:layout_constraintTop_toBottomOf="@+id/user_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_label2"
+                    style="@style/layout"
+                    android:inputType="textUri"
+                    android:textColor="@color/gris2"
+
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

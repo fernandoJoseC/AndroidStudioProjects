@@ -9,7 +9,9 @@
 
     </style>
 
-    <style name="layout_label" parent="layout"></style>
+    <style name="layout_label" parent="layout">
+
+    </style>
 
     <style name="layout_edit" parent="layout">
 

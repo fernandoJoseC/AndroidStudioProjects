@@ -3,23 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/layout"
-    android:background="@color/white"
+    android:background="@drawable/ic_loginbackg3"
     tools:context=".MainActivity">
-
-
 
     <ScrollView
         style="@style/layout"
-        tools:ignore="MissingConstraints"
-        >
+        tools:ignore="MissingConstraints">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             style="@style/layout"
             android:orientation="vertical"
-            android:background="@drawable/ic_loginbackg"
-            >
 
+            >
 
 
             <TextView
@@ -28,11 +24,11 @@
                 android:layout_marginLeft="@dimen/border_left_right"
                 android:layout_marginTop="@dimen/top_border2"
                 android:layout_marginRight="@dimen/border_left_right"
+                android:drawableRight="@drawable/ic_icon_user"
                 android:text="@string/main"
                 android:textAlignment="inherit"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/black"
-                android:drawableRight="@drawable/ic_icon_user"
                 android:textSize="@dimen/text_title"
                 app:layout_constraintTop_toTopOf="parent"
 
@@ -42,7 +38,7 @@
                 android:id="@+id/textUserName"
                 style="@style/layout_label"
                 android:layout_marginLeft="@dimen/border_left_right"
-                android:layout_marginTop="@dimen/top_button2"
+                android:layout_marginTop="@dimen/top_border2"
                 android:layout_marginRight="@dimen/border_left_right"
                 android:paddingLeft="20dp"
                 android:text="@string/user"
@@ -135,8 +131,6 @@
                 app:layout_constraintLeft_toLeftOf="@id/button"
                 app:layout_constraintRight_toRightOf="@id/button"
                 app:layout_constraintTop_toBottomOf="@id/button" />
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
