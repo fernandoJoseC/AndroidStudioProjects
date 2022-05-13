@@ -20,7 +20,7 @@
 
             <TextView
                 android:id="@+id/text_user_label"
-                style="@style/layout_label"
+                style="@style/layout"
                 android:layout_marginLeft="@dimen/border_left_right"
                 android:layout_marginTop="@dimen/top_border2"
                 android:layout_marginRight="@dimen/border_left_right"
@@ -31,12 +31,11 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_title"
                 app:layout_constraintTop_toTopOf="parent"
-
-                />
+                tools:layout_editor_absoluteX="40dp" />
 
             <TextView
                 android:id="@+id/textUserName"
-                style="@style/layout_label"
+                style="@style/layout"
                 android:layout_marginLeft="@dimen/border_left_right"
                 android:layout_marginTop="@dimen/top_border2"
                 android:layout_marginRight="@dimen/border_left_right"
@@ -71,7 +70,7 @@
 
             <TextView
                 android:id="@+id/textPassword"
-                style="@style/layout_label"
+                style="@style/layout"
                 android:layout_marginLeft="@dimen/border_left_right"
                 android:layout_marginTop="@dimen/top_border"
                 android:layout_marginRight="@dimen/border_left_right"
@@ -108,7 +107,7 @@
 
             <Button
                 android:id="@+id/button"
-                style="@style/layout_edit"
+                style="@style/layout_button"
                 android:layout_marginTop="@dimen/top_button"
                 android:background="@drawable/contorno"
                 android:backgroundTintMode="screen"
