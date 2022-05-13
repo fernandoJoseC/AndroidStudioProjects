@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private fun initializacionListeners(){
         views.button.setOnClickListener {
             //var textoRecogido = views.textInput.text
-            Toast.makeText(this, ("el usuario es "+ views.editTextTextPersonName.text + " la contrasena es "+views.editTextTextPassword.text), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, ("el usuario es "+ views.editTextUserName2.text + " la contrasena es "+views.editTextPassword2.text), Toast.LENGTH_SHORT).show()
 
         }
     }
