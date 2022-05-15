@@ -4,6 +4,7 @@
     <dimen name="top_border">20dip</dimen>
     <dimen name="top_border2">105dip</dimen>
     <dimen name="border_left_right">40dip</dimen>
+    <dimen name="border_left_right2">50dip</dimen>
     <dimen name="text_height">24dip</dimen>
     <dimen name="text_title">30dip</dimen>
     <dimen name="text_button">20dip</dimen>

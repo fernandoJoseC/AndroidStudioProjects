@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.15033721923828125" />
         <entry key="app/src/main/res/drawable/ic_icon_user.xml" value="0.1885" />
         <entry key="app/src/main/res/drawable/ic_interface_user.xml" value="0.1885" />
+        <entry key="app/src/main/res/drawable/ic_interface_user4.xml" value="0.1315" />
         <entry key="app/src/main/res/drawable/ic_loginback2.xml" value="0.184" />
         <entry key="app/src/main/res/drawable/ic_loginback5.xml" value="0.1885" />
         <entry key="app/src/main/res/drawable/ic_loginbackg.xml" value="0.184" />
@@ -21,8 +22,8 @@
         <entry key="app/src/main/res/drawable/imagen1.xml" value="0.354" />
         <entry key="app/src/main/res/drawable/loginbackg.xml" value="0.184" />
         <entry key="app/src/main/res/drawable/unverano.xml" value="0.354" />
-        <entry key="app/src/main/res/layout/activity_interface_user.xml" value="0.31094970703125" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2215568862275449" />
+        <entry key="app/src/main/res/layout/activity_interface_user.xml" value="0.22722778320312503" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2705681166962949" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2075" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.354" />
       </map>

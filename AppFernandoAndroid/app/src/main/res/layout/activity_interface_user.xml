@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/layout"
-    android:background="@drawable/ic_interface_user"
+    android:background="@drawable/ic_interface_user4"
     tools:context=".interface_user.interface_user">
 
     <ScrollView
@@ -17,9 +17,9 @@
             <TextView
                 android:id="@+id/user_label"
                 style="@style/layout_label"
-                android:layout_marginLeft="@dimen/border_left_right"
+                android:layout_marginLeft="@dimen/border_left_right2"
                 android:layout_marginTop="@dimen/top_border2"
-                android:layout_marginRight="@dimen/border_left_right"
+                android:layout_marginRight="@dimen/border_left_right2"
                 android:background="@drawable/contorno2"
                 android:paddingLeft="20dp"
                 android:paddingTop="15dp"
@@ -118,7 +118,7 @@
                 android:layout_marginTop="@dimen/top_button"
                 android:background="@drawable/contorno"
                 android:backgroundTintMode="screen"
-                android:text="@string/login"
+                android:text="@string/button"
                 android:textColor="@color/gris1"
                 android:textSize="@dimen/text_button"
                 app:layout_constraintLeft_toLeftOf="@id/email_label"

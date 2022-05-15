@@ -3,11 +3,12 @@
     <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="login">Entrar</string>
+    <string name="button">Aceptar</string>
     <string name="main">Iniciar sesión</string>
     <string name="help_link">¿Tienes problemas para iniciar sesión?</string>
     <string name="name_user">Nombre</string>
     <string name="last_name_user">Apellido</string>
-    <string name="email_user">Usuario</string>
+    <string name="email_user">Correo electronico</string>
     <string name="phone_number_user">Telefono</string>
 
 </resources>
