@@ -8,9 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppFernandoAndroid">
+        android:theme="@style/Theme.Design.NoActionBar">
         <activity
-            android:name=".interface_user.interface_user"
+            android:name=".interface_user.Principal_main"
+            android:exported="false" />
+        <activity
+            android:name=".interface_user.Principal"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

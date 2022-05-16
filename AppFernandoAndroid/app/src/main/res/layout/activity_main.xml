@@ -31,7 +31,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_title"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="40dp" />
+                />
 
             <TextView
                 android:id="@+id/textUserName"

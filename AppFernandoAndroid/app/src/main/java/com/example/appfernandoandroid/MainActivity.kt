@@ -3,9 +3,8 @@ package com.example.appfernandoandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.appfernandoandroid.databinding.ActivityMainBinding
-import com.example.appfernandoandroid.interface_user.interface_user
+import com.example.appfernandoandroid.interface_user.Principal_main
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToPrincipal(userText:String){
-        var intent: Intent = Intent(this, interface_user::class.java)
+        var intent: Intent = Intent(this, Principal_main::class.java)
         intent.putExtra("name_user", userText)
         startActivity(intent)
     }
