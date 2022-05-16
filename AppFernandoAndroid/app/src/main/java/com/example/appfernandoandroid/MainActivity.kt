@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         views.button.setOnClickListener {
             //var textoRecogido = views.textInput.text
             //Toast.makeText(this, ("el usuario es "+ views.editTextUserName2.text + " la contrasena es "+views.editTextPassword2.text), Toast.LENGTH_SHORT).show()
-            val userText = views.editTextUserName2.text.toString()
-            val passwordText = views.editTextPassword2.text.toString()
+            val userText = views.editTextUserNameEdit.text.toString()
+            val passwordText = views.editTextPasswordEdit.text.toString()
             userText?.let {
                 passwordText?.let { itp ->
                     if (it.equals("fernando") && itp.equals("5311")) {
