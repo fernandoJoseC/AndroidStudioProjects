@@ -9,6 +9,7 @@ import com.example.appfernandoandroid.databinding.ActivityPrincipalMainBinding
 class Principal_main : AppCompatActivity() {
 
     private lateinit var views: ActivityPrincipalMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         views = ActivityPrincipalMainBinding.inflate(layoutInflater)
@@ -18,6 +19,6 @@ class Principal_main : AppCompatActivity() {
     }
     private fun showName(intent: Intent){
         val user_name=intent.getStringExtra("name_user")
-        views.showName.setText(user_name)
+        views.userLabel.setText("Hola ".toString()+user_name)
     }
 }
