@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="top_border">20dip</dimen>
-    <dimen name="top_border2">105dip</dimen>
-    <dimen name="border_left_right">40dip</dimen>
-    <dimen name="border_left_right2">50dip</dimen>
-    <dimen name="text_height">35dip</dimen>
-    <dimen name="text_title">30dip</dimen>
+    <dimen name="pad_left_layout_user_label_principal">20dip</dimen>
+    <dimen name="top_border">90dip</dimen>
+    <dimen name="border_left_right">50dip</dimen>
+    <dimen name="space_between_edit_box">30dip</dimen>
+    <dimen name="text_title">40dip</dimen>
     <dimen name="text_button">20dip</dimen>
     <dimen name="top_button">80dip</dimen>
-    <dimen name="top_button2">90dip</dimen>
-    <dimen name="top_text">140dip</dimen>
-    <dimen name="top_label">5dp</dimen>
+    <dimen name="top_edit_text_user_name">140dip</dimen>
+    <dimen name="top_label">8dp</dimen>
     <dimen name="padding_label">20dip</dimen>
     <dimen name="top_bottom">150dp</dimen>
-    <dimen name="top_bottom_interface">50dp</dimen>
+    <dimen name="top_bottom_interface">80dp</dimen>
 
 
 </resources>

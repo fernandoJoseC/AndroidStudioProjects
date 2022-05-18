@@ -1,28 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--"layouts for both activities"-->
+
     <style name="layout">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:fontFamily">"@font/barlow_bold"</item>
     </style>
 
-    <style name="layout_label" parent="layout">
-        <item name="android:fontFamily">"@font/barlow_condensed_regular"</item>
+    <!--layout_constraint_layout-->
+    <style name="layout_constraint_layout" parent="layout">
+        <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="layout_edit" parent="layout">
+    <!--main button-->
+    <style name="layout_button" parent="layout_edit_box">
+        <item name="android:layout_marginTop">@dimen/top_button</item>
+        <item name="android:background">@drawable/contorno</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/text_button</item>
+    </style>
+
+    <!--####################################################################################-->
+
+    <!--activity_main styles-->
+
+    <!--layout_constraint_layout_main-->
+    <style name="layout_constraint_layout_main" parent="layout_constraint_layout">
+        <item name="android:background">@drawable/ic_loginbackg</item>
+        <item name="android:paddingBottom">@dimen/top_bottom</item>
+    </style>
+
+    <!--"login_label"-->
+    <style name="layout_login_label" parent="layout">
+        <item name="android:layout_marginLeft">@dimen/border_left_right</item>
+        <item name="android:layout_marginRight">@dimen/border_left_right</item>
+        <item name="android:layout_marginTop">@dimen/top_border</item>
+        <item name="android:drawableRight">@drawable/ic_iniciar_sesion</item>
+        <item name="android:text">@string/main</item>
+        <item name="android:textAlignment">inherit</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <!--main layout edit box-->
+    <style name="layout_edit_box" parent="layout"><!--cambiar a layout_edit_text_user_name-->
         <item name="android:layout_width">0dp</item>
         <item name="android:paddingLeft">20dp</item>
         <item name="android:paddingRight">20dp</item>
-        <item name="android:fontFamily">"@font/barlow_condensed_regular"</item>
+        <item name="android:background">@drawable/contorno_white</item>
     </style>
 
-    <style name="layout_button" parent="layout_edit">
-        <item name="android:fontFamily">"@font/barlow_bold"</item>
+    <!--"editTextUserName"-->
+    <style name="layout_editTextUserName" parent="layout_edit_box">
+        <item name="android:layout_marginTop">@dimen/top_edit_text_user_name</item>
+        <item name="android:hint">@string/user</item>
+        <item name="android:textColorHint">@color/dark_grey</item>
     </style>
 
-    <style name="layout_input_user" parent="layout">
+    <!--"editTextUserName_edit"-->
+    <style name="layout_editTextUserName_edit" parent="layout">
+        <item name="android:drawableRight">@drawable/ic_icon_user</item>
+        <item name="android:inputType">textUri</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <!--editTextPassword-->
+    <style name="layout_editTextPassword" parent="layout_editTextUserName">
+        <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
+        <item name="android:hint">@string/password</item>
+    </style>
+
+    <!--editTextPassword_edit-->
+    <style name="editTextPassword_edit" parent="layout_editTextUserName_edit">
+        <item name="android:inputType">textUri</item>
+    </style>
+
+    <!--main button enter-->
+    <style name="layout_button_enter" parent="layout_button">
+        <item name="android:text">@string/login</item>
+    </style>
+
+    <!--####################################################################################-->
+
+    <!--activity_principal_main styles-->
+
+    <!--layout_constraint_layout_principal_main-->
+    <style name="layout_constraint_layout_principal_main" parent="layout_constraint_layout">
+        <item name="android:background">@drawable/ic_interface_user</item>
+        <item name="android:paddingBottom">@dimen/top_bottom_interface</item>
+    </style>
+
+    <!--layout_user_label-->
+    <style name="layout_user_label" parent="layout">
+        <item name="android:layout_marginLeft">@dimen/border_left_right</item>
+        <item name="android:layout_marginTop">@dimen/top_border</item>
+        <item name="android:layout_marginRight">@dimen/border_left_right</item>
+        <item name="android:background">@drawable/contorno_white</item>
+        <item name="android:paddingLeft">@dimen/pad_left_layout_user_label_principal</item>
+        <item name="android:paddingTop">@dimen/top_label</item>
+        <item name="android:text">@string/user</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/space_between_edit_box</item>
+    </style>
+
+    <!--layout_name_label-->
+    <style name="layout_name_label" parent="layout_edit_box">
+        <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
+        <item name="android:hint">@string/name_user</item>
+        <item name="android:textColorHint">@color/dark_grey</item>
+    </style>
+
+    <!--layout_name_label_edit-->
+    <style name="layout_name_label_edit" parent="layout">
+        <item name="android:drawableRight">@drawable/ic_icon_user</item>
+        <item name="android:inputType">textUri</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <!--layout_phone_label-->
+    <style name="layout_phone_label" parent="layout_edit_box">
+        <item name="android:hint">@string/phone_number_user</item>
+        <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
+        <item name="android:textColorHint">@color/dark_grey</item>
+    </style>
+
+    <!--layout_phone_label_edit-->
+    <style name="layout_phone_label_edit" parent="layout_name_label_edit">
+        <item name="android:drawableRight">@drawable/ic_baseline_smartphone_24</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <!--layout_email_label-->
+    <style name="layout_email_label" parent="layout_edit_box">
+        <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
+        <item name="android:hint">@string/email_user</item>
+        <item name="android:textColorHint">@color/dark_grey</item>
+    </style>
+
+    <!--layout_email_label_edit-->
+    <style name="layout_email_label_edit" parent="layout_name_label_edit">
+        <item name="android:drawableRight">@drawable/ic_baseline_alternate_email_24</item>
+        <item name="android:inputType">textWebEmailAddress</item>
+    </style>
+
+    <!--button_accept-->
+    <style name="layout_button_accept" parent="layout_button">
+        <item name="android:text">@string/button</item>
     </style>
 
 </resources>

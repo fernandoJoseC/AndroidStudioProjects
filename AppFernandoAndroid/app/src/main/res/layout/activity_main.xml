@@ -8,77 +8,47 @@
 
     <ScrollView
         style="@style/layout"
-        tools:ignore="MissingConstraints"
-        >
+        tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/layout"
-            android:orientation="vertical"
-            android:background="@drawable/ic_loginbackg3"
-            android:paddingBottom="@dimen/top_bottom"
-            >
+            style="@style/layout_constraint_layout_main">
 
             <TextView
-                android:id="@+id/text_user_label"
-                style="@style/layout"
-                android:layout_marginLeft="@dimen/border_left_right2"
-                android:layout_marginTop="@dimen/top_border2"
-                android:layout_marginRight="@dimen/border_left_right2"
-                android:drawableRight="@drawable/ic_iniciar_sesion"
-                android:text="@string/main"
-                android:textAlignment="inherit"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_title"
+                android:id="@+id/login_label"
+                style="@style/layout_login_label"
                 app:layout_constraintTop_toTopOf="parent"
                 />
 
 
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextUserName"
-                style="@style/layout_edit"
-                android:layout_marginTop="@dimen/top_text"
-                android:background="@drawable/contorno_white"
-                android:hint="@string/user"
-                android:textColorHint="@color/dark_grey"
-                app:layout_constraintLeft_toLeftOf="@+id/text_user_label"
-                app:layout_constraintRight_toRightOf="@+id/text_user_label"
-                app:layout_constraintTop_toBottomOf="@+id/text_user_label">
+                style="@style/layout_editTextUserName"
+                app:layout_constraintLeft_toLeftOf="@+id/login_label"
+                app:layout_constraintRight_toRightOf="@+id/login_label"
+                app:layout_constraintTop_toBottomOf="@+id/login_label">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextUserName_edit"
-                    style="@style/layout_input_user"
-                    android:drawableRight="@drawable/ic_icon_user"
-                    android:inputType="textUri"
-                    android:textColor="@color/dark_grey"></com.google.android.material.textfield.TextInputEditText>
+                    style="@style/layout_editTextUserName_edit"
+                    tools:ignore="TouchTargetSizeCheck"></com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextPassword"
-                style="@style/layout_edit"
-                android:layout_marginTop="@dimen/text_height"
-                android:background="@drawable/contorno_white"
-                android:hint="@string/password"
-                android:textColorHint="@color/dark_grey"
+                style="@style/layout_editTextPassword"
+                app:endIconDrawable="@drawable/ic_baseline_vpn_key_24"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/dark_grey"
                 app:layout_constraintLeft_toLeftOf="@id/editTextUserName"
                 app:layout_constraintRight_toRightOf="@id/editTextUserName"
-                app:layout_constraintTop_toBottomOf="@+id/editTextUserName"
-                app:endIconMode="password_toggle"
-                app:endIconDrawable="@drawable/ic_baseline_vpn_key_24"
-                app:endIconTint="@color/dark_grey">
+                app:layout_constraintTop_toBottomOf="@+id/editTextUserName">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextPassword_edit"
-                    style="@style/layout_input_user"
-                    android:inputType="textPassword"
-                    android:textColor="@color/dark_grey"
-                    android:contentDescription="@string/password"
-                    >
+                    style="@style/editTextPassword_edit"
+                    android:textColor="@color/dark_grey">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -87,13 +57,7 @@
 
             <Button
                 android:id="@+id/button"
-                style="@style/layout_button"
-                android:layout_marginTop="@dimen/top_button"
-                android:background="@drawable/contorno"
-                android:backgroundTintMode="screen"
-                android:text="@string/login"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/text_button"
+                style="@style/layout_button_enter"
                 app:layout_constraintLeft_toLeftOf="@id/editTextUserName"
                 app:layout_constraintRight_toRightOf="@id/editTextPassword"
                 app:layout_constraintTop_toBottomOf="@id/editTextPassword"

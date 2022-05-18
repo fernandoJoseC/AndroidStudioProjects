@@ -11,51 +11,32 @@
         tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/layout"
-            android:orientation="vertical"
-            android:background="@drawable/ic_interface_user4"
-            android:paddingBottom="@dimen/top_bottom_interface"
-            >
+            style="@style/layout_constraint_layout_principal_main">
 
             <TextView
                 android:id="@+id/user_label"
-                style="@style/layout_label"
-                android:layout_marginLeft="@dimen/border_left_right2"
-                android:layout_marginTop="@dimen/top_border2"
-                android:layout_marginRight="@dimen/border_left_right2"
-                android:background="@drawable/contorno_white"
-                android:paddingLeft="@dimen/top_border"
-                android:paddingTop="@dimen/top_label"
-                android:text="@string/user"
-                android:textColor="@color/dark_grey"
-                android:textSize="@dimen/text_height"
+                style="@style/layout_user_label"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/name_label"
-                style="@style/layout_edit"
-                android:layout_marginTop="@dimen/text_height"
-                android:background="@drawable/contorno_white"
-
-                android:hint="@string/name_user"
-                android:textColorHint="@color/dark_grey"
+                style="@style/layout_name_label"
                 app:layout_constraintLeft_toLeftOf="@+id/user_label"
                 app:layout_constraintRight_toRightOf="@+id/user_label"
                 app:layout_constraintTop_toBottomOf="@+id/user_label">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/name_label2"
-                    style="@style/layout"
-                    android:drawableRight="@drawable/ic_icon_user"
-                    android:inputType="textUri"
-                    android:textColor="@color/dark_grey"></com.google.android.material.textfield.TextInputEditText>
+                    android:id="@+id/name_label_edit"
+                    style="@style/layout_name_label_edit">
+
+                </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/last_name_label"
-                style="@style/layout_edit"
-                android:layout_marginTop="@dimen/text_height"
+                style="@style/layout_edit_box"
+                android:layout_marginTop="@dimen/space_between_edit_box"
                 android:background="@drawable/contorno_white"
                 android:hint="@string/last_name_user"
                 android:textColorHint="@color/dark_grey"
@@ -64,63 +45,46 @@
                 app:layout_constraintTop_toBottomOf="@+id/name_label">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/last_name_label2"
-                    style="@style/layout"
-                    android:drawableRight="@drawable/ic_icon_user"
-                    android:inputType="textUri"
-                    android:textColor="@color/dark_grey"></com.google.android.material.textfield.TextInputEditText>
+                    android:id="@+id/last_name_label_edit"
+                    style="@style/layout_name_label_edit">
+
+                </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/phone_label"
-                style="@style/layout_edit"
-                android:layout_marginTop="@dimen/text_height"
-                android:background="@drawable/contorno_white"
-                android:hint="@string/phone_number_user"
-                android:textColorHint="@color/dark_grey"
+                style="@style/layout_phone_label"
                 app:layout_constraintLeft_toLeftOf="@+id/last_name_label"
                 app:layout_constraintRight_toRightOf="@+id/last_name_label"
                 app:layout_constraintTop_toBottomOf="@+id/last_name_label">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone_label2"
-                    style="@style/layout"
-                    android:drawableRight="@drawable/ic_baseline_smartphone_24"
-                    android:inputType="number"
-                    android:textColor="@color/dark_grey"></com.google.android.material.textfield.TextInputEditText>
+                    android:id="@+id/phone_label_edit"
+                    style="@style/layout_phone_label_edit">
+
+                </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_label"
-                style="@style/layout_edit"
-                android:layout_marginTop="@dimen/text_height"
-                android:background="@drawable/contorno_white"
-                android:hint="@string/email_user"
-                android:textColorHint="@color/dark_grey"
+                style="@style/layout_email_label"
                 app:layout_constraintLeft_toLeftOf="@+id/phone_label"
                 app:layout_constraintRight_toRightOf="@+id/phone_label"
                 app:layout_constraintTop_toBottomOf="@+id/phone_label">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email_label2"
-                    style="@style/layout"
-                    android:drawableRight="@drawable/ic_baseline_alternate_email_24"
-                    android:inputType="textWebEmailAddress"
-                    android:textColor="@color/dark_grey"></com.google.android.material.textfield.TextInputEditText>
+                    android:id="@+id/email_label_edit"
+                    style="@style/layout_email_label_edit">
+
+                </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/button"
-                style="@style/layout_button"
-                android:layout_marginTop="@dimen/top_button"
-                android:background="@drawable/contorno"
-                android:backgroundTintMode="screen"
-                android:text="@string/button"
-                android:textColor="@color/light_grey"
-                android:textSize="@dimen/text_button"
+                style="@style/layout_button_enter"
                 app:layout_constraintLeft_toLeftOf="@id/email_label"
                 app:layout_constraintRight_toRightOf="@id/email_label"
                 app:layout_constraintTop_toBottomOf="@id/email_label" />
