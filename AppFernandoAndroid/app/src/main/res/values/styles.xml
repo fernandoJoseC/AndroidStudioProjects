@@ -43,6 +43,7 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_title</item>
+        <item name="contentDescription">@string/main</item>
     </style>
 
     <!--main layout edit box-->
@@ -58,6 +59,7 @@
         <item name="android:layout_marginTop">@dimen/top_edit_text_user_name</item>
         <item name="android:hint">@string/user</item>
         <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="contentDescription">@string/user</item>
     </style>
 
     <!--"editTextUserName_edit"-->
@@ -71,6 +73,7 @@
     <style name="layout_editTextPassword" parent="layout_editTextUserName">
         <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
         <item name="android:hint">@string/password</item>
+        <item name="contentDescription">@string/password</item>
     </style>
 
     <!--editTextPassword_edit-->
@@ -81,6 +84,7 @@
     <!--main button enter-->
     <style name="layout_button_enter" parent="layout_button">
         <item name="android:text">@string/login</item>
+        <item name="contentDescription">@string/login</item>
     </style>
 
     <!--####################################################################################-->
@@ -104,6 +108,7 @@
         <item name="android:text">@string/user</item>
         <item name="android:textColor">@color/dark_grey</item>
         <item name="android:textSize">@dimen/space_between_edit_box</item>
+        <item name="contentDescription">@string/user</item>
     </style>
 
     <!--layout_name_label-->
@@ -111,6 +116,7 @@
         <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
         <item name="android:hint">@string/name_user</item>
         <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="contentDescription">@string/name_user</item>
     </style>
 
     <!--layout_name_label_edit-->
@@ -120,17 +126,24 @@
         <item name="android:textColor">@color/dark_grey</item>
     </style>
 
+    <!--layout_last_name_label-->
+    <style name="layout_last_name_label" parent="layout_name_label">
+        <item name="android:hint">@string/last_name_user</item>
+        <item name="contentDescription">@string/last_name_user</item>
+    </style>
+
     <!--layout_phone_label-->
     <style name="layout_phone_label" parent="layout_edit_box">
         <item name="android:hint">@string/phone_number_user</item>
         <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
         <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="contentDescription">@string/phone_number_user</item>
     </style>
 
     <!--layout_phone_label_edit-->
     <style name="layout_phone_label_edit" parent="layout_name_label_edit">
         <item name="android:drawableRight">@drawable/ic_baseline_smartphone_24</item>
-        <item name="android:inputType">number</item>
+        <item name="android:inputType">phone</item>
     </style>
 
     <!--layout_email_label-->
@@ -138,6 +151,7 @@
         <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
         <item name="android:hint">@string/email_user</item>
         <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="contentDescription">@string/email_user</item>
     </style>
 
     <!--layout_email_label_edit-->
@@ -149,6 +163,7 @@
     <!--button_accept-->
     <style name="layout_button_accept" parent="layout_button">
         <item name="android:text">@string/button</item>
+        <item name="contentDescription">@string/button</item>
     </style>
 
 </resources>

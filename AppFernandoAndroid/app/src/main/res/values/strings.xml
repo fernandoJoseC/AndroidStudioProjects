@@ -10,5 +10,4 @@
     <string name="last_name_user">Apellido</string>
     <string name="email_user">Correo electronico</string>
     <string name="phone_number_user">Telefono</string>
-
 </resources>
