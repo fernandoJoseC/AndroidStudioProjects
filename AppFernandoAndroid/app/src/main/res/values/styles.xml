@@ -14,7 +14,7 @@
         <item name="android:orientation">vertical</item>
     </style>
 
-    <!--main button-->
+    <!--main buttonLoggin-->
     <style name="layout_button" parent="layout_edit_box">
         <item name="android:layout_marginTop">@dimen/top_button</item>
         <item name="android:background">@drawable/contorno</item>
@@ -26,8 +26,8 @@
 
     <!--activity_main styles-->
 
-    <!--layout_constraint_layout_main-->
-    <style name="layout_constraint_layout_main" parent="layout_constraint_layout">
+    <!--layout_ConstraintLayout-->
+    <style name="layout_ConstraintLayout" parent="layout_constraint_layout">
         <item name="android:background">@drawable/ic_loginbackg</item>
         <item name="android:paddingBottom">@dimen/top_bottom</item>
     </style>
@@ -37,9 +37,8 @@
         <item name="android:layout_marginLeft">@dimen/border_left_right</item>
         <item name="android:layout_marginRight">@dimen/border_left_right</item>
         <item name="android:layout_marginTop">@dimen/top_border</item>
-        <item name="android:drawableRight">@drawable/ic_iniciar_sesion</item>
         <item name="android:text">@string/main</item>
-        <item name="android:textAlignment">inherit</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_title</item>
@@ -48,41 +47,42 @@
 
     <!--main layout edit box-->
     <style name="layout_edit_box" parent="layout"><!--cambiar a layout_edit_text_user_name-->
-        <item name="android:layout_width">0dp</item>
-        <item name="android:paddingLeft">20dp</item>
-        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_width">@dimen/zero</item>
+        <item name="android:paddingLeft">@dimen/padding_L_R</item>
+        <item name="android:paddingRight">@dimen/padding_L_R</item>
         <item name="android:background">@drawable/contorno_white</item>
     </style>
 
-    <!--"editTextUserName"-->
-    <style name="layout_editTextUserName" parent="layout_edit_box">
+    <!--"inputUserName"-->
+    <style name="layout_inputUserName" parent="layout_edit_box">
         <item name="android:layout_marginTop">@dimen/top_edit_text_user_name</item>
         <item name="android:hint">@string/user</item>
         <item name="android:textColorHint">@color/dark_grey</item>
         <item name="contentDescription">@string/user</item>
     </style>
 
-    <!--"editTextUserName_edit"-->
-    <style name="layout_editTextUserName_edit" parent="layout">
-        <item name="android:drawableRight">@drawable/ic_icon_user</item>
+    <!--"inputUserName_edit"-->
+    <style name="layout_inputUserName_edit" parent="layout">
+        <item name="android:drawableRight">@drawable/ic_baseline_person_24</item>
         <item name="android:inputType">textUri</item>
         <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:paddingRight">@dimen/padding_R</item>
     </style>
 
-    <!--editTextPassword-->
-    <style name="layout_editTextPassword" parent="layout_editTextUserName">
+    <!--inputPassword-->
+    <style name="layout_inputPassword" parent="layout_inputUserName">
         <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
         <item name="android:hint">@string/password</item>
         <item name="contentDescription">@string/password</item>
     </style>
 
-    <!--editTextPassword_edit-->
-    <style name="editTextPassword_edit" parent="layout_editTextUserName_edit">
+    <!--inputPassword_edit-->
+    <style name="layout_inputPassword_edit" parent="layout_inputUserName_edit">
         <item name="android:inputType">textUri</item>
     </style>
 
-    <!--main button enter-->
-    <style name="layout_button_enter" parent="layout_button">
+    <!--main buttonLoggin enter-->
+    <style name="layout_buttonLoggin" parent="layout_button">
         <item name="android:text">@string/login</item>
         <item name="contentDescription">@string/login</item>
     </style>
@@ -91,8 +91,8 @@
 
     <!--activity_principal_main styles-->
 
-    <!--layout_constraint_layout_principal_main-->
-    <style name="layout_constraint_layout_principal_main" parent="layout_constraint_layout">
+    <!--layout_ConstraintLayout_PM-->
+    <style name="layout_ConstraintLayout_PM" parent="layout_constraint_layout">
         <item name="android:background">@drawable/ic_interface_user</item>
         <item name="android:paddingBottom">@dimen/top_bottom_interface</item>
     </style>
@@ -102,7 +102,7 @@
         <item name="android:layout_marginLeft">@dimen/border_left_right</item>
         <item name="android:layout_marginTop">@dimen/top_border</item>
         <item name="android:layout_marginRight">@dimen/border_left_right</item>
-        <item name="android:background">@drawable/contorno_white</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:paddingLeft">@dimen/pad_left_layout_user_label_principal</item>
         <item name="android:paddingTop">@dimen/top_label</item>
         <item name="android:text">@string/user</item>
@@ -121,7 +121,7 @@
 
     <!--layout_name_label_edit-->
     <style name="layout_name_label_edit" parent="layout">
-        <item name="android:drawableRight">@drawable/ic_icon_user</item>
+        <item name="android:drawableRight">@drawable/ic_baseline_person_24</item>
         <item name="android:inputType">textUri</item>
         <item name="android:textColor">@color/dark_grey</item>
     </style>
@@ -130,6 +130,13 @@
     <style name="layout_last_name_label" parent="layout_name_label">
         <item name="android:hint">@string/last_name_user</item>
         <item name="contentDescription">@string/last_name_user</item>
+    </style>
+
+    <!--layout_last_name_label_edit-->
+    <style name="layout_last_name_label_edit" parent="layout">
+        <item name="android:drawableRight">@drawable/ic_baseline_person_outline_24</item>
+        <item name="android:inputType">textUri</item>
+        <item name="android:textColor">@color/dark_grey</item>
     </style>
 
     <!--layout_phone_label-->
@@ -142,7 +149,7 @@
 
     <!--layout_phone_label_edit-->
     <style name="layout_phone_label_edit" parent="layout_name_label_edit">
-        <item name="android:drawableRight">@drawable/ic_baseline_smartphone_24</item>
+        <item name="android:drawableRight">@drawable/ic_baseline_local_phone</item>
         <item name="android:inputType">phone</item>
     </style>
 
@@ -156,7 +163,7 @@
 
     <!--layout_email_label_edit-->
     <style name="layout_email_label_edit" parent="layout_name_label_edit">
-        <item name="android:drawableRight">@drawable/ic_baseline_alternate_email_24</item>
+        <item name="android:drawableRight">@drawable/ic_baseline_email_24</item>
         <item name="android:inputType">textWebEmailAddress</item>
     </style>
 

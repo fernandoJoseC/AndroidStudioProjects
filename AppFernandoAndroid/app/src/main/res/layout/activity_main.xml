@@ -11,7 +11,7 @@
         tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/layout_constraint_layout_main">
+            style="@style/layout_ConstraintLayout">
 
             <TextView
                 android:id="@+id/login_label"
@@ -21,34 +21,33 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editTextUserName"
-                style="@style/layout_editTextUserName"
+                android:id="@+id/inputUserName"
+                style="@style/layout_inputUserName"
                 app:layout_constraintLeft_toLeftOf="@+id/login_label"
                 app:layout_constraintRight_toRightOf="@+id/login_label"
                 app:layout_constraintTop_toBottomOf="@+id/login_label"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextUserName_edit"
-                    style="@style/layout_editTextUserName_edit"
+                    android:id="@+id/inputUserName_edit"
+                    style="@style/layout_inputUserName_edit"
                     tools:ignore="TouchTargetSizeCheck"></com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editTextPassword"
-                style="@style/layout_editTextPassword"
-                app:endIconDrawable="@drawable/ic_baseline_vpn_key_24"
+                android:id="@+id/inputPassword"
+                style="@style/layout_inputPassword"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/dark_grey"
-                app:layout_constraintLeft_toLeftOf="@id/editTextUserName"
-                app:layout_constraintRight_toRightOf="@id/editTextUserName"
-                app:layout_constraintTop_toBottomOf="@+id/editTextUserName">
+                app:layout_constraintLeft_toLeftOf="@id/inputUserName"
+                app:layout_constraintRight_toRightOf="@id/inputUserName"
+                app:layout_constraintTop_toBottomOf="@+id/inputUserName">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextPassword_edit"
-                    style="@style/editTextPassword_edit">
+                    android:id="@+id/inputPassword_edit"
+                    style="@style/layout_inputPassword_edit">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -56,11 +55,11 @@
 
 
             <Button
-                android:id="@+id/button"
-                style="@style/layout_button_enter"
-                app:layout_constraintLeft_toLeftOf="@id/editTextUserName"
-                app:layout_constraintRight_toRightOf="@id/editTextPassword"
-                app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+                android:id="@+id/buttonLoggin"
+                style="@style/layout_buttonLoggin"
+                app:layout_constraintLeft_toLeftOf="@id/inputPassword"
+                app:layout_constraintRight_toRightOf="@id/inputPassword"
+                app:layout_constraintTop_toBottomOf="@id/inputPassword"
 
                 />
 
