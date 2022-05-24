@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".interface_user.Principal">
+    tools:context=".interface_user.Productos">
 
-    <TextView
-        android:id="@+id/show_name"
-        style="@style/the_inputs"
-        android:text="fer"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/lista_productos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

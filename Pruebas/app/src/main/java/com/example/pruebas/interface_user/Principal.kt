@@ -22,6 +22,6 @@ class Principal : AppCompatActivity() {
         val user_name = intent.getStringExtra("name_user")
         //views.showName.setText(resources.getText(R.string.app_name).toString()+": "+"hola fer")
         views.showName.setText(resources.getText(R.string.app_name).toString()+": "+user_name)
-    }
 
+    }
 }

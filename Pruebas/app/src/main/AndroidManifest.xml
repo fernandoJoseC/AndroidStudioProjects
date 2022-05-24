@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pruebas">
         <activity
+            android:name=".interface_user.Productos"
+            android:exported="false" />
+        <activity
+            android:name=".Productos"
+            android:exported="false" />
+        <activity
             android:name=".interface_user.Principal"
             android:exported="false" />
         <activity
