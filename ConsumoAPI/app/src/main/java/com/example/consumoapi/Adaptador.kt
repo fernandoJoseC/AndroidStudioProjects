@@ -28,9 +28,11 @@ class Adaptador(val lista: List<Producto>) : RecyclerView.Adapter<Adaptador.Prod
     }
 
     override fun onBindViewHolder(holder: ProductoHolder, position: Int) {
-        holder.viewsFragmentHolder.nombre.text = lista[position].nombre
-        holder.viewsFragmentHolder.descripcion.text = lista[position].descripcion
-        holder.viewsFragmentHolder.precio.text = lista[position].precio.toString()
+        holder.viewsFragmentHolder.nombre.text = lista[position].marca
+        holder.viewsFragmentHolder.descripcion.text = lista[position].modelo
+        holder.viewsFragmentHolder.capacidad.text = lista[position].capacidad.toString()
+        holder.viewsFragmentHolder.placas.text = lista[position].placas
+        holder.viewsFragmentHolder.precio.text = lista[position].descripcion
         Picasso.get().load(lista[position].url).fit().centerInside().into(holder.viewsFragmentHolder.image)
     }
 
