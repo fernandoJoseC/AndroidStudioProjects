@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--constraints for layouts-->
+    <style name="constraintsLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--constraints for fragment-->
+    <style name="constraintsFragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/heightFragment</item>
+        <item name="android:layout_margin">@dimen/marginConstraint</item>
+    </style>
+
+    <!--style for login text-->
+    <style name="loginText">
+        <item name="android:layout_width">@dimen/textBox</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:text">@string/loginText</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
+    <!--constraints for input layout-->
+    <style name="inputLayout">
+        <item name="android:layout_width">@dimen/zero</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--constraints for edit text-->
+    <style name="editText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/mtTextFragment</item>
+    </style>
+
+    <!--styles for buttons-->
+    <style name="buttonStyle">
+        <item name="android:layout_width">@dimen/widthButton</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--constraints for image fragment-->
+    <style name="imageFragment">
+        <item name="android:layout_width">@dimen/widthImage</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/marginConstraint</item>
+    </style>
+
+    <!--constraints for layout fragment-->
+    <style name="layoutFragment">
+        <item name="android:layout_width">@dimen/zero</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/marginConstraint</item>
+    </style>
+
+</resources>

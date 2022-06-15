@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--dimens for login text-->
+    <dimen name="textBox">250dp</dimen>
+
+    <!--text size-->
+    <dimen name="textSize">25dp</dimen>
+
+    <!--zero-->
+    <dimen name="zero">0dp</dimen>
+
+    <!--width button-->
+    <dimen name="widthButton">150dp</dimen>
+    <!--width image-->
+    <dimen name="widthImage">200dp</dimen>
+
+    <!--height fragment-->
+    <dimen name="heightFragment">200dp</dimen>
+
+    <!--margin constraint-->
+    <dimen name="marginConstraint">10dp</dimen>
+
+    <!--margin top text fragment-->
+    <dimen name="mtTextFragment">14dp</dimen>
+</resources>

@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/layout"
+    style="@style/layout_prin_main"
     tools:context=".interface_user.Principal_main">
 
     <ScrollView
@@ -27,7 +27,8 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/name_label_edit"
-                    style="@style/layout_name_label_edit">
+                    style="@style/layout_name_label_edit"
+                    >
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -80,7 +81,7 @@
 
             <Button
                 android:id="@+id/buttonAccept"
-                style="@style/layout_button_accept"
+                style="@style/layout_buttonAccept"
                 app:layout_constraintLeft_toLeftOf="@id/email_label"
                 app:layout_constraintRight_toRightOf="@id/email_label"
                 app:layout_constraintTop_toBottomOf="@id/email_label" />

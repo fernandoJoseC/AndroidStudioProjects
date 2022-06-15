@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <dimen name="width_button">150dp</dimen>
+    <dimen name="height_button">50dp</dimen>
+    <dimen name="margin_R">20dp</dimen>
+    <dimen name="margin_L">40dp</dimen>
+    <dimen name="margin_TB">12dp</dimen>
+    <dimen name="margin_TB_label">20dp</dimen>
+    <dimen name="margin_top">150dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="text_size">17dp</dimen>
+    <dimen name="text_size_label">25dp</dimen>
+    <dimen name="draw_pad">5dp</dimen>
+    <dimen name="margin_LRT">5dp</dimen>
+
 </resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentContainer"
+    style="@style/constraintsFragment"
+    tools:context=".dto.Product">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/constraintsLayout"
+        android:background="@color/gray">
+
+        <ImageView
+            android:id="@+id/image"
+            style="@style/imageFragment"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/descOne"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/descOne"
+            style="@style/layoutFragment"
+            android:background="@color/light_gray"
+            app:layout_constraintLeft_toRightOf="@id/image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textOne"
+                style="@style/editText"
+                android:text="text 1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textTwo"
+                style="@style/editText"
+                android:text="text 2"
+                app:layout_constraintTop_toBottomOf="@id/textOne" />
+
+            <TextView
+                android:id="@+id/textThree"
+                style="@style/editText"
+                android:text="text 3"
+                app:layout_constraintTop_toBottomOf="@id/textTwo" />
+
+            <TextView
+                android:id="@+id/textFour"
+                style="@style/editText"
+                android:text="text 4"
+                app:layout_constraintTop_toBottomOf="@id/textThree" />
+
+            <TextView
+                android:id="@+id/textFive"
+                style="@style/editText"
+                android:text="text 5"
+                app:layout_constraintTop_toBottomOf="@id/textFour" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

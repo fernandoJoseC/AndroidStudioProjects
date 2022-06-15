@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">practicaMiercoles</string>
+    <!--login text-->
+    <string name="loginText">Login</string>
+    <!--user hint-->
+    <string name="userHint">User</string>
+    <!--pass hint-->
+    <string name="passHint">Password</string>
+    <!--enter button-->
+    <string name="enterButton">Enter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

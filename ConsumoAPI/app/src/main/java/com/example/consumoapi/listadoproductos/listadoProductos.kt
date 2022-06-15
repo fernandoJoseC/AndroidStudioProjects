@@ -9,6 +9,7 @@ import com.example.consumoapi.R
 import com.example.consumoapi.databinding.ActivityListadoProductosBinding
 import com.example.consumoapi.dto.Producto
 import com.example.consumoapi.dto.WsClient
+import com.example.consumoapi.dto.WsLogin
 import com.example.consumoapi.producto
 import retrofit2.Call
 import retrofit2.Callback
@@ -32,7 +33,7 @@ class listadoProductos : AppCompatActivity() {
     }
 
     private fun addListProducts() {
-        WsClient.api()?.buscarListaProductos()?.enqueue(object : Callback<List<Producto>> {
+        WsLogin.apiLista()?.buscarListaProductos()?.enqueue(object : Callback<List<Producto>> {
             override fun onResponse(call: Call<List<Producto>>, response: Response<List<Producto>>) {
                 if (response.isSuccessful){
                     val list = response.body()!!

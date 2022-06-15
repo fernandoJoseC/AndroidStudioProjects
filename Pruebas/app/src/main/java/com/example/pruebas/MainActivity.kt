@@ -1,12 +1,5 @@
 package com.example.pruebas
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Toast
-import com.example.pruebas.databinding.ActivityMainBinding
-import com.example.pruebas.interface_user.Principal
-import com.example.pruebas.interface_user.Productos
 
 class MainActivity : AppCompatActivity() {
 

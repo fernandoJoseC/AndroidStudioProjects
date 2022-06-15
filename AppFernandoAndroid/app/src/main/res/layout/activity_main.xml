@@ -2,8 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/layout"
-    android:background="@color/dark_green"
+    style="@style/layout_main"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -40,14 +39,15 @@
                 android:id="@+id/inputPassword"
                 style="@style/layout_inputPassword"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/dark_grey"
+                app:endIconTint="@color/light_grey_icons"
                 app:layout_constraintLeft_toLeftOf="@id/inputUserName"
                 app:layout_constraintRight_toRightOf="@id/inputUserName"
                 app:layout_constraintTop_toBottomOf="@+id/inputUserName">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputPassword_edit"
-                    style="@style/layout_inputPassword_edit">
+                    style="@style/layout_inputPassword_edit"
+                    >
 
                 </com.google.android.material.textfield.TextInputEditText>
 

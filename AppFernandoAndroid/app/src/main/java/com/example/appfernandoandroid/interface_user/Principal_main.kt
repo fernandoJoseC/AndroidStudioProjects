@@ -21,4 +21,5 @@ class Principal_main : AppCompatActivity() {
         val user_name = intent.getStringExtra("name_user")
         views.userLabel.setText("Hola ".toString() + user_name)
     }
+
 }

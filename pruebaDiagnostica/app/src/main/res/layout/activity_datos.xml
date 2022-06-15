@@ -2,18 +2,141 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/layout"
+    style="@style/layout_bg"
     tools:context=".datos.Datos">
 
 
     <ScrollView
-       style="@style/layout"
+        style="@style/layout"
         tools:ignore="MissingConstraints">
 
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/layout">
 
-        <ImageView
-            android:id="@+id/imageView"
-            style="@style/logo_uide"
-            app:srcCompat="@drawable/uide_logo" />
+            <ImageView
+                android:id="@+id/image_datos"
+                style="@style/logo_uide" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_layout"
+                style="@style/layout_edit"
+                app:layout_constraintTop_toBottomOf="@+id/image_datos"
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
+                android:background="@drawable/contorno_white"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_layout_edit"
+                    style="@style/layout_edit_box"
+                    android:hint="@string/usuario"
+                    android:inputType="textUri"
+                    android:layout_marginTop="@dimen/margin_LRT"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_layout"
+                style="@style/layout_edit"
+                app:layout_constraintTop_toBottomOf="@+id/user_layout"
+                app:startIconDrawable="@drawable/ic_baseline_perm_contact_calendar_24"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_layout_edit"
+                    style="@style/layout_edit_box"
+                    android:background="@drawable/contorno_white"
+                    android:hint="@string/nombres"
+                    android:inputType="textUri"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_layout"
+                style="@style/layout_edit"
+                app:layout_constraintTop_toBottomOf="@+id/name_layout"
+                app:startIconDrawable="@drawable/ic_baseline_email_24"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_layout_edit"
+                    style="@style/layout_edit_box"
+                    android:background="@drawable/contorno_white"
+                    android:hint="@string/email"
+                    android:inputType="textWebEmailAddress"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_layout"
+                style="@style/layout_edit"
+                app:layout_constraintTop_toBottomOf="@+id/email_layout"
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_layout_edit"
+                    style="@style/layout_edit_box"
+                    android:background="@drawable/contorno_white"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/rpassword_layout"
+                style="@style/layout_edit"
+                app:layout_constraintTop_toBottomOf="@+id/password_layout"
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_baseline_lock_open_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rpassword_layout_edit"
+                    style="@style/layout_edit_box"
+                    android:background="@drawable/contorno_white"
+                    android:hint="@string/rpassword"
+                    android:inputType="textPassword"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_layout"
+                style="@style/layout_edit"
+                app:layout_constraintTop_toBottomOf="@+id/rpassword_layout"
+                app:startIconDrawable="@drawable/ic_baseline_local_phone_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone_layout_edit"
+                    style="@style/layout_edit_box"
+                    android:background="@drawable/contorno_white"
+                    android:hint="@string/telefono"
+                    android:inputType="phone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/address_layout"
+                style="@style/layout_edit"
+                app:layout_constraintTop_toBottomOf="@+id/phone_layout"
+                app:startIconDrawable="@drawable/ic_baseline_add_location_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/address_layout_edit"
+                    style="@style/layout_edit_box"
+                    android:background="@drawable/contorno_white"
+                    android:hint="@string/direccion"
+                    android:inputType="textUri"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_accept"
+                style="@style/button_accept"
+                app:layout_constraintTop_toBottomOf="@+id/address_layout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

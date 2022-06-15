@@ -9,6 +9,14 @@
         <item name="android:fontFamily">"@font/barlow_bold"</item>
     </style>
 
+    <style name="layout_main" parent="layout">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="layout_prin_main" parent="layout">
+        <item name="android:background">@color/white</item>
+    </style>
+
     <!--layout_constraint_layout-->
     <style name="layout_constraint_layout" parent="layout">
         <item name="android:orientation">vertical</item>
@@ -18,7 +26,7 @@
     <style name="layout_button" parent="layout_edit_box">
         <item name="android:layout_marginTop">@dimen/top_button</item>
         <item name="android:background">@drawable/contorno</item>
-        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_button</item>
     </style>
 
@@ -28,8 +36,6 @@
 
     <!--layout_ConstraintLayout-->
     <style name="layout_ConstraintLayout" parent="layout_constraint_layout">
-        <item name="android:background">@drawable/ic_loginbackg</item>
-        <item name="android:paddingBottom">@dimen/top_bottom</item>
     </style>
 
     <!--"login_label"-->
@@ -40,7 +46,7 @@
         <item name="android:text">@string/main</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/text_title</item>
         <item name="contentDescription">@string/main</item>
     </style>
@@ -51,22 +57,24 @@
         <item name="android:paddingLeft">@dimen/padding_L_R</item>
         <item name="android:paddingRight">@dimen/padding_L_R</item>
         <item name="android:background">@drawable/contorno_white</item>
+        <item name="android:fontFamily">"@font/barlow_semi_condensed_light"</item>
+
     </style>
 
     <!--"inputUserName"-->
     <style name="layout_inputUserName" parent="layout_edit_box">
         <item name="android:layout_marginTop">@dimen/top_edit_text_user_name</item>
         <item name="android:hint">@string/user</item>
-        <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey_icons</item>
         <item name="contentDescription">@string/user</item>
     </style>
 
     <!--"inputUserName_edit"-->
     <style name="layout_inputUserName_edit" parent="layout">
-        <item name="android:drawableRight">@drawable/ic_baseline_person_24</item>
+        <item name="android:drawableLeft">@drawable/ic_baseline_person_24</item>
         <item name="android:inputType">textUri</item>
-        <item name="android:textColor">@color/dark_grey</item>
-        <item name="android:paddingRight">@dimen/padding_R</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawablePadding">@dimen/padding_R</item>
     </style>
 
     <!--inputPassword-->
@@ -79,6 +87,8 @@
     <!--inputPassword_edit-->
     <style name="layout_inputPassword_edit" parent="layout_inputUserName_edit">
         <item name="android:inputType">textUri</item>
+        <item name="android:drawableLeft">@drawable/ic_baseline_lock_24</item>
+        <item name="android:drawablePadding">@dimen/padding_R</item>
     </style>
 
     <!--main buttonLoggin enter-->
@@ -93,8 +103,7 @@
 
     <!--layout_ConstraintLayout_PM-->
     <style name="layout_ConstraintLayout_PM" parent="layout_constraint_layout">
-        <item name="android:background">@drawable/ic_interface_user</item>
-        <item name="android:paddingBottom">@dimen/top_bottom_interface</item>
+
     </style>
 
     <!--layout_user_label-->
@@ -106,7 +115,7 @@
         <item name="android:paddingLeft">@dimen/pad_left_layout_user_label_principal</item>
         <item name="android:paddingTop">@dimen/top_label</item>
         <item name="android:text">@string/user</item>
-        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/space_between_edit_box</item>
         <item name="contentDescription">@string/user</item>
     </style>
@@ -115,15 +124,16 @@
     <style name="layout_name_label" parent="layout_edit_box">
         <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
         <item name="android:hint">@string/name_user</item>
-        <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey_icons</item>
         <item name="contentDescription">@string/name_user</item>
     </style>
 
     <!--layout_name_label_edit-->
     <style name="layout_name_label_edit" parent="layout">
-        <item name="android:drawableRight">@drawable/ic_baseline_person_24</item>
+        <item name="android:drawableLeft">@drawable/ic_baseline_person_24</item>
         <item name="android:inputType">textUri</item>
-        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawablePadding">@dimen/padding_R</item>
     </style>
 
     <!--layout_last_name_label-->
@@ -134,43 +144,50 @@
 
     <!--layout_last_name_label_edit-->
     <style name="layout_last_name_label_edit" parent="layout">
-        <item name="android:drawableRight">@drawable/ic_baseline_person_outline_24</item>
+        <item name="android:drawableLeft">@drawable/ic_baseline_person_outline_24</item>
         <item name="android:inputType">textUri</item>
-        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawablePadding">@dimen/padding_R</item>
     </style>
 
     <!--layout_phone_label-->
     <style name="layout_phone_label" parent="layout_edit_box">
         <item name="android:hint">@string/phone_number_user</item>
         <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
-        <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey_icons</item>
         <item name="contentDescription">@string/phone_number_user</item>
     </style>
 
     <!--layout_phone_label_edit-->
     <style name="layout_phone_label_edit" parent="layout_name_label_edit">
-        <item name="android:drawableRight">@drawable/ic_baseline_local_phone</item>
+        <item name="android:drawableLeft">@drawable/ic_baseline_local_phone</item>
         <item name="android:inputType">phone</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <!--layout_email_label-->
     <style name="layout_email_label" parent="layout_edit_box">
         <item name="android:layout_marginTop">@dimen/space_between_edit_box</item>
         <item name="android:hint">@string/email_user</item>
-        <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey_icons</item>
         <item name="contentDescription">@string/email_user</item>
     </style>
 
     <!--layout_email_label_edit-->
     <style name="layout_email_label_edit" parent="layout_name_label_edit">
-        <item name="android:drawableRight">@drawable/ic_baseline_email_24</item>
+        <item name="android:drawableLeft">@drawable/ic_baseline_email_24</item>
         <item name="android:inputType">textWebEmailAddress</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
-    <!--button_accept-->
-    <style name="layout_button_accept" parent="layout_button">
+    <!--buttonAccept-->
+    <style name="layout_buttonAccept" parent="layout_button">
         <item name="android:text">@string/button</item>
         <item name="contentDescription">@string/button</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">5</item>
     </style>
 
 </resources>

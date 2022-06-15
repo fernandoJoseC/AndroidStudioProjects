@@ -2,18 +2,117 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/layout"
+    style="@style/layout_bg"
     tools:context=".show.Show">
 
     <ScrollView
         style="@style/layout"
         tools:ignore="MissingConstraints">
 
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/layout">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            style="@style/logo_uide"
-            app:srcCompat="@drawable/uide_logo" />
+            <ImageView
+                android:id="@+id/imagen_show"
+                style="@style/logo_uide" />
+
+            <TextView
+                android:id="@+id/user_label"
+                style="@style/text_view_label"
+                android:text="@string/usuario"
+                app:layout_constraintTop_toBottomOf="@+id/imagen_show" />
+
+
+            <TextView
+                android:id="@+id/view_usuario"
+                style="@style/text_view"
+                android:background="@drawable/contorno_white"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:text="@string/usuario"
+                app:layout_constraintTop_toBottomOf="@+id/user_label" />
+
+            <TextView
+                android:id="@+id/name_label"
+                style="@style/text_view_label"
+                android:text="@string/nombres"
+                app:layout_constraintTop_toBottomOf="@+id/view_usuario"
+                />
+
+            <TextView
+                android:id="@+id/view_name"
+                style="@style/text_view"
+                android:background="@drawable/contorno_white"
+                android:drawableStart="@drawable/ic_baseline_perm_contact_calendar_24"
+                android:text="@string/nombres"
+                app:layout_constraintTop_toBottomOf="@id/name_label"
+
+                />
+
+            <TextView
+                android:id="@+id/email_label"
+                style="@style/text_view_label"
+                android:text="@string/email"
+                app:layout_constraintTop_toBottomOf="@+id/view_name"
+                />
+
+            <TextView
+                android:id="@+id/view_email"
+                style="@style/text_view"
+                android:background="@drawable/contorno_white"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:text="@string/email"
+                app:layout_constraintTop_toBottomOf="@id/email_label"
+                />
+
+            <TextView
+                android:id="@+id/password_label"
+                style="@style/text_view_label"
+                android:text="@string/password"
+                app:layout_constraintTop_toBottomOf="@+id/view_email"
+                />
+
+            <TextView
+                android:id="@+id/view_password"
+                style="@style/text_view"
+                android:background="@drawable/contorno_white"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:text="@string/password"
+                app:layout_constraintTop_toBottomOf="@id/password_label" />
+
+            <TextView
+                android:id="@+id/phone_label"
+                style="@style/text_view_label"
+                android:text="@string/telefono"
+                app:layout_constraintTop_toBottomOf="@+id/view_password"
+                />
+
+
+            <TextView
+                android:id="@+id/view_phone"
+                style="@style/text_view"
+                android:background="@drawable/contorno_white"
+                android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                android:text="@string/telefono"
+                app:layout_constraintTop_toBottomOf="@id/phone_label"
+                />
+
+            <TextView
+                android:id="@+id/address_label"
+                style="@style/text_view_label"
+                android:text="@string/direccion"
+                app:layout_constraintTop_toBottomOf="@+id/view_phone"
+                />
+
+            <TextView
+                android:id="@+id/view_address"
+                style="@style/text_view"
+                android:background="@drawable/contorno_white"
+                android:drawableStart="@drawable/ic_baseline_add_location_24"
+                android:text="@string/direccion"
+                app:layout_constraintTop_toBottomOf="@id/address_label" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
