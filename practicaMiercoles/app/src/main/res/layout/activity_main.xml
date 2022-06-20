@@ -22,7 +22,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layoutUser"
+                android:id="@+id/user"
                 style="@style/inputLayout"
                 app:layout_constraintLeft_toLeftOf="@+id/loginText"
                 app:layout_constraintRight_toRightOf="@+id/loginText"
@@ -38,9 +38,9 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutPassword"
                 style="@style/inputLayout"
-                app:layout_constraintLeft_toLeftOf="@+id/layoutUser"
-                app:layout_constraintRight_toRightOf="@+id/layoutUser"
-                app:layout_constraintTop_toBottomOf="@+id/layoutUser"
+                app:layout_constraintLeft_toLeftOf="@+id/user"
+                app:layout_constraintRight_toRightOf="@+id/user"
+                app:layout_constraintTop_toBottomOf="@+id/user"
                 app:endIconMode="password_toggle">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -58,6 +58,16 @@
                 app:layout_constraintLeft_toLeftOf="@+id/layoutPassword"
                 app:layout_constraintRight_toRightOf="@+id/layoutPassword"
                 app:layout_constraintTop_toBottomOf="@+id/layoutPassword" />
+
+            <Button
+                android:id="@+id/registerButton"
+                style="@style/buttonStyle"
+                android:text="@string/registerButton"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/purple_700"
+                app:layout_constraintTop_toBottomOf="@id/enterButton"
+                app:layout_constraintLeft_toLeftOf="@id/enterButton"
+                app:layout_constraintRight_toRightOf="@id/enterButton"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

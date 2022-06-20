@@ -44,9 +44,16 @@ class MainActivity : AppCompatActivity() {
         views.enterButton.setOnClickListener {
             goToList()
         }
+        views.registerButton.setOnClickListener {
+            goToRegister()
+        }
     }
     private fun goToList(){
         var intent: Intent = Intent(this, listProducts::class.java)
+        startActivity(intent)
+    }
+    private fun goToRegister(){
+        var intent: Intent = Intent(this, register::class.java)
         startActivity(intent)
     }
 }

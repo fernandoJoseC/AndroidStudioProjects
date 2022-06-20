@@ -24,7 +24,7 @@ class login : AppCompatActivity() {
 
     private fun addListeners() {
         views.entrar.setOnClickListener {
-            var usuario = Usuario()
+            /*var usuario = Usuario()
             usuario.usuario = views.userInput.text.toString().trim()
             usuario.clave = views.passInput.text.toString().trim()
             WsLogin.apiLogeo()?.logearse(usuario)?.enqueue(object : Callback<String> {
@@ -41,7 +41,12 @@ class login : AppCompatActivity() {
                     Toast.makeText(this@login, t.message.toString(), Toast.LENGTH_SHORT).show()
                 }
 
-            })
+            })*/
+            goToListado()
         }
+    }
+    private fun goToListado(){
+        var intent: Intent = Intent(this,listadoProductos::class.java)
+        startActivity(intent)
     }
 }

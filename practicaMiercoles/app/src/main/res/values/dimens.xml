@@ -5,6 +5,8 @@
 
     <!--text size-->
     <dimen name="textSize">25dp</dimen>
+    <!--text size register text-->
+    <dimen name="textSizeRegister">15dp</dimen>
 
     <!--zero-->
     <dimen name="zero">0dp</dimen>
@@ -16,6 +18,8 @@
 
     <!--height fragment-->
     <dimen name="heightFragment">200dp</dimen>
+    <!--height input layout-->
+    <dimen name="heightInputLayout">55dp</dimen>
 
     <!--margin constraint-->
     <dimen name="marginConstraint">10dp</dimen>

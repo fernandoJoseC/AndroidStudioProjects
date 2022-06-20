@@ -23,6 +23,12 @@
         <item name="android:textSize">@dimen/textSize</item>
     </style>
 
+    <!--style for register text-->
+    <style name="regiterText" parent="loginText">
+        <item name="android:textSize">@dimen/textSizeRegister</item>
+        <item name="android:gravity">left</item>
+    </style>
+
     <!--constraints for input layout-->
     <style name="inputLayout">
         <item name="android:layout_width">@dimen/zero</item>

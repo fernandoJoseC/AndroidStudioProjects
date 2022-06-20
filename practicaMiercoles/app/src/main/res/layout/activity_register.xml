@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/constraintsLayout"
+    tools:context=".register">
+
+    <ScrollView
+        style="@style/constraintsLayout"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/constraintsLayout"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/regiterText"
+                android:text="Name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameLayout"
+                style="@style/inputLayout"
+                app:layout_constraintLeft_toLeftOf="@id/name"
+                app:layout_constraintRight_toRightOf="@id/name"
+                app:layout_constraintTop_toBottomOf="@id/name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEdit"
+                    style="@style/editText"
+                    android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lastName"
+                style="@style/regiterText"
+                android:layout_margin="@dimen/mtTextFragment"
+                android:text="Last Name"
+                app:layout_constraintLeft_toLeftOf="@id/nameLayout"
+                app:layout_constraintRight_toRightOf="@id/nameLayout"
+                app:layout_constraintTop_toBottomOf="@id/nameLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNameLayout"
+                style="@style/inputLayout"
+                app:layout_constraintLeft_toLeftOf="@id/lastName"
+                app:layout_constraintRight_toRightOf="@id/lastName"
+                app:layout_constraintTop_toBottomOf="@id/lastName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastNameEdit"
+                    style="@style/editText"
+                    android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/user"
+                style="@style/regiterText"
+                android:layout_margin="@dimen/mtTextFragment"
+                android:text="User"
+                app:layout_constraintLeft_toLeftOf="@id/lastNameLayout"
+                app:layout_constraintRight_toRightOf="@id/lastNameLayout"
+                app:layout_constraintTop_toBottomOf="@id/lastNameLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userLayout"
+                style="@style/inputLayout"
+                app:layout_constraintLeft_toLeftOf="@id/user"
+                app:layout_constraintRight_toRightOf="@id/user"
+                app:layout_constraintTop_toBottomOf="@id/user">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userEdit"
+                    style="@style/editText"
+                    android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/password"
+                style="@style/regiterText"
+                android:layout_margin="@dimen/mtTextFragment"
+                android:text="Password"
+                app:layout_constraintLeft_toLeftOf="@id/userLayout"
+                app:layout_constraintRight_toRightOf="@id/userLayout"
+                app:layout_constraintTop_toBottomOf="@id/userLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordLayout"
+                style="@style/inputLayout"
+                app:endIconMode="password_toggle"
+                app:layout_constraintLeft_toLeftOf="@id/password"
+                app:layout_constraintRight_toRightOf="@id/password"
+                app:layout_constraintTop_toBottomOf="@id/password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEdit"
+                    style="@style/editText"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/passwordRepeat"
+                style="@style/regiterText"
+                android:layout_margin="@dimen/mtTextFragment"
+                android:text="Repeat Password"
+                app:layout_constraintLeft_toLeftOf="@id/passwordLayout"
+                app:layout_constraintRight_toRightOf="@id/passwordLayout"
+                app:layout_constraintTop_toBottomOf="@id/passwordLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordRepeatLayout"
+                style="@style/inputLayout"
+                app:endIconMode="password_toggle"
+                app:layout_constraintLeft_toLeftOf="@id/passwordRepeat"
+                app:layout_constraintRight_toRightOf="@id/passwordRepeat"
+                app:layout_constraintTop_toBottomOf="@id/passwordRepeat">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordRepeatEdit"
+                    style="@style/editText"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/email"
+                style="@style/regiterText"
+                android:layout_margin="@dimen/mtTextFragment"
+                android:text="Email"
+                app:layout_constraintLeft_toLeftOf="@id/passwordRepeatLayout"
+                app:layout_constraintRight_toRightOf="@id/passwordRepeatLayout"
+                app:layout_constraintTop_toBottomOf="@id/passwordRepeatLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailLayout"
+                style="@style/inputLayout"
+                app:layout_constraintLeft_toLeftOf="@id/email"
+                app:layout_constraintRight_toRightOf="@id/email"
+                app:layout_constraintTop_toBottomOf="@id/email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEdit"
+                    style="@style/editText"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/phone"
+                style="@style/regiterText"
+                android:layout_margin="@dimen/mtTextFragment"
+                android:text="Phone"
+                app:layout_constraintLeft_toLeftOf="@id/emailLayout"
+                app:layout_constraintRight_toRightOf="@id/emailLayout"
+                app:layout_constraintTop_toBottomOf="@id/emailLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneLayout"
+                style="@style/inputLayout"
+                app:layout_constraintLeft_toLeftOf="@id/phone"
+                app:layout_constraintRight_toRightOf="@id/phone"
+                app:layout_constraintTop_toBottomOf="@id/phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneEdit"
+                    style="@style/editText"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/registerButtonActivity"
+                style="@style/buttonStyle"
+                android:text="Register"
+                app:layout_constraintTop_toBottomOf="@id/phoneLayout"
+                app:layout_constraintLeft_toLeftOf="@id/phoneLayout"
+                app:layout_constraintRight_toRightOf="@id/phoneLayout"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
