@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ConsumoAPI"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".toolbar"
+            android:exported="false" />
+        <activity
             android:name=".Preferencias"
             android:exported="false" />
         <activity

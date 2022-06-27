@@ -1,11 +1,13 @@
 package com.example.consumoapi.listadoproductos
 
 import android.content.Intent
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.consumoapi.Adaptador
@@ -29,8 +31,28 @@ class listadoProductos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         views = ActivityListadoProductosBinding.inflate(layoutInflater)
         setContentView(views.root)
+        accionesMenuBajo()
         initialConfiguration()
         addListProducts()
+    }
+
+    private fun accionesMenuBajo() {
+        views.navigation.setOnItemSelectedListener { itemBajo ->
+            when (itemBajo.itemId) {
+                R.id.home -> {
+                    Toast.makeText(this, "ya estas en home", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.personal -> {
+                    val intent = Intent(this@listadoProductos, Preferencias::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                else -> false
+
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -41,19 +63,33 @@ class listadoProductos : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.buscar->{
+            R.id.buscar -> {
                 Toast.makeText(this, "quiero compartir", Toast.LENGTH_SHORT).show()
                 true
             }
-            R.id.ajustes -> {
-                val intent= Intent(this, Preferencias::class.java)
+            R.id.personal -> {
+                val intent = Intent(this@listadoProductos, Preferencias::class.java)
                 startActivity(intent)
                 true
             }
-            R.id.ejemplo->{
-                Toast.makeText(this, "Hola ejemplo", Toast.LENGTH_SHORT).show()
+            R.id.videos -> {
+                views.listadoItems.visibility = View.INVISIBLE
+                views.listadoItems.adapter = null
+                views.contenido.visibility = View.VISIBLE
                 true
             }
+            R.id.preferencias -> {
+                views.listadoItems.visibility = View.VISIBLE
+                views.contenido.visibility = View.INVISIBLE
+                addListProducts()
+                true
+            }
+            R.id.adicional -> {
+                views.contenido.visibility = View.INVISIBLE
+                views.listadoItems.visibility = View.VISIBLE
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
