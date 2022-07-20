@@ -4,15 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1615" />
+        <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.215" />
         <entry key="app/src/main/res/layout/activity_listado_productos.xml" value="0.28794312408004985" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.37818888788637917" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2682556152343749" />
-        <entry key="app/src/main/res/layout/activity_preferencias.xml" value="0.26553141276041664" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2669736779254417" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4882354736328124" />
+        <entry key="app/src/main/res/layout/activity_preferencias.xml" value="0.22996515679442509" />
+        <entry key="app/src/main/res/layout/activity_toolbar.xml" value="0.3182291666666667" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.19972826086956522" />
         <entry key="app/src/main/res/layout/fragment_fragmento.xml" value="0.19972826086956522" />
         <entry key="app/src/main/res/layout/fragment_producto.xml" value="0.28841844641644027" />
         <entry key="app/src/main/res/menu/menu_bajo.xml" value="0.29276580810546876" />
-        <entry key="app/src/main/res/menu/principal.xml" value="0.36111907958984374" />
+        <entry key="app/src/main/res/menu/principal.xml" value="0.22496185302734373" />
       </map>
     </option>
   </component>

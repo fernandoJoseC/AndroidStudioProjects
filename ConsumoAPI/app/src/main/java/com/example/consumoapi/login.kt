@@ -44,7 +44,16 @@ class login : AppCompatActivity() {
             })*/
             goToListado()
         }
+        views.toolbar.setOnClickListener {
+            goToToolbar()
+        }
     }
+
+    private fun goToToolbar() {
+        var intent: Intent = Intent(this,toolbar::class.java)
+        startActivity(intent)
+    }
+
     private fun goToListado(){
         var intent: Intent = Intent(this,listadoProductos::class.java)
         startActivity(intent)

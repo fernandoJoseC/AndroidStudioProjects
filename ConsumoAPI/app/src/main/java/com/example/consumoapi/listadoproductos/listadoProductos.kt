@@ -58,6 +58,7 @@ class listadoProductos : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.principal, menu)
+
         return super.onCreateOptionsMenu(menu)
     }
 

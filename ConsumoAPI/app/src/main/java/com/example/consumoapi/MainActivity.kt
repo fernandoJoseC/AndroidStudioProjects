@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             goToListadoProductos()
         }
 
+
     }
     private fun goToListadoProductos(){
         var intent: Intent = Intent(this,listadoProductos::class.java)

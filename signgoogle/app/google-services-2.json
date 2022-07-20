@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1054091089700",
+    "project_id": "sign-fbe01",
+    "storage_bucket": "sign-fbe01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054091089700:android:90a36b18c9c632b43ec5b1",
+        "android_client_info": {
+          "package_name": "com.example.signgoogle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054091089700-7e42h28d5daq9b42a3l37bj0uu1rpt35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQsSbF1sqVTC0lZCe1nByuEOGk42jgyQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054091089700-7e42h28d5daq9b42a3l37bj0uu1rpt35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
