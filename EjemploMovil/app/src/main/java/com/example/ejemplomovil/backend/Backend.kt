@@ -7,7 +7,7 @@ class Backend {
 
     companion object {
 
-        private const val URL = "http://172.16.70.254:8080/"
+        private const val URL = "http://172.16.76.250:8080/"
         private var retrofit: Retrofit? = null
 
         private fun retrofitClient(): Retrofit? {

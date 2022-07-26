@@ -20,7 +20,15 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         views = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(views.root)
-        logearse()
+        //logearse()
+        cargarCedula()
+    }
+
+    private fun cargarCedula(){
+        val cedula = intent.getStringExtra("cedula")
+        cedula?.let {
+            views.user.setText(it.toString().trim())
+        }
     }
 
     private fun logearse() {

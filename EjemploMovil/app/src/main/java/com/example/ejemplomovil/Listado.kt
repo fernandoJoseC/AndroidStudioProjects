@@ -18,20 +18,25 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.getSystemService
 import com.casella.turecuador.db.Backend
+import com.casella.turecuador.db.DatosEnviar
 import com.casella.turecuador.db.TelefnoEnviar
 import com.example.ejemplomovil.DB.DBIn
+import com.example.ejemplomovil.backend.DatosUsuario
 import com.example.ejemplomovil.databinding.ActivityListadoBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.net.URL
 
 class Listado : AppCompatActivity() {
-    private lateinit var views: ActivityListadoBinding
 
+    private lateinit var views: ActivityListadoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         views = ActivityListadoBinding.inflate(layoutInflater)
         setContentView(views.root)
-        setSupportActionBar(views.toolbar)
+        //setSupportActionBar(views.toolbar)
 //        cargarCedulaEnTitle()
 //        createNotificationChannel()
         crearCanal()
@@ -55,53 +60,66 @@ class Listado : AppCompatActivity() {
 
     fun cargarListenerButtom() {
 
-        val ford = BitmapFactory.decodeResource(
-            resources,
-            R.mipmap.ford
-        )
-        val ford_raptor = BitmapFactory.decodeResource(
-            resources,
-            R.mipmap.ford_raptor
-        )
 
-        val channelId = getString(R.string.user)
-        val notification = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.dashboard)
-            .setContentTitle("Titulo de la notificación")
-            .setContentText("Mensaje que se puede poner cuando se muestra la notificación")
-            .setSubText("uide.edu.ec")
-            .setStyle(
-                NotificationCompat.BigPictureStyle().bigPicture(ford).bigLargeIcon(ford_raptor)
-            )
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            .build()
 
         //val channelId = getString(R.string.user)
-        val notification2 = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.dashboard)
-            .setContentTitle("Titulo de la notificación 2")
-            .setContentText("Mensaje que se puede poner cuando se muestra la notificación 2")
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT).setStyle(
-                NotificationCompat.BigTextStyle()
-                    .bigText("fasdfladsf aslfj alsdf sldfj asdflkasd flasdfasdfjasd fsadf")
-            )
-            .build()
+//        val notification2 = NotificationCompat.Builder(this, channelId)
+//            .setSmallIcon(R.drawable.dashboard)
+//            .setContentTitle("Titulo de la notificación 2")
+//            .setContentText("Mensaje que se puede poner cuando se muestra la notificación 2")
+//            .setPriority(NotificationCompat.PRIORITY_DEFAULT).setStyle(
+//                NotificationCompat.BigTextStyle()
+//                    .bigText("fasdfladsf aslfj alsdf sldfj asdflkasd flasdfasdfjasd fsadf")
+//            )
+//            .build()
 
         views.doNotification.setOnClickListener {
+            Backend.api()
+                ?.logearse(DatosEnviar.Builder().user("pruebados").clave("pruebaclave").build())
+                ?.enqueue(object : Callback<DatosUsuario> {
+                    override fun onResponse(
+                        call: Call<DatosUsuario>,
+                        response: Response<DatosUsuario>
+                    ) {
+                        if (response.isSuccessful) {
+                            val datosUsuario = response.body()
+                            datosUsuario?.let { datos ->
+                                createNotificationChannel(
+                                    datos!!.cedula,
+                                    datos!!.email,
+                                    datos!!.nombres,
+                                    datos!!.urlFoto
+                                )
+                            }
 
-            with(NotificationManagerCompat.from(this)) {
-                notify(1, notification)
-            }
-            with(NotificationManagerCompat.from(this)) {
-                notify(2, notification2)
-            }
+                        } else {
+                            //Toast.makeText(this@Listado, response.message(),Toast.LENGTH_SHORT).show()
+                            createNotificationChannel(
+                                "fallo con cedula",
+                                "fallo con los nombres",
+                                "fallo con el email",
+                                null
+                            )
+                        }
+                    }
+
+                    override fun onFailure(call: Call<DatosUsuario>, t: Throwable) {
+                        Toast.makeText(this@Listado, t.message,Toast.LENGTH_SHORT).show()
+                    }
+
+                })
+
+
+//            with(NotificationManagerCompat.from(this)) {
+//                notify(2, notification2)
+//            }
         }
         views.doNotificationTwo.setOnClickListener {
 
 
-            with(NotificationManagerCompat.from(this)) {
-                notify(2, notification2)
-            }
+//            with(NotificationManagerCompat.from(this)) {
+//                notify(2, notification2)
+//            }
         }
     }
 
@@ -234,20 +252,49 @@ class Listado : AppCompatActivity() {
         }
     }
 
-    private fun createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {   //(1)
-            val name = getString(R.string.app_name)   // (2)
-            val channelId = getString(R.string.user) // (3)
-            val descriptionText = getString(R.string.dashboard) // (4)
-            val importance = NotificationManager.IMPORTANCE_MAX // (5)
+    private fun createNotificationChannel(cedula: String?, nombres: String?, email: String?, urlFoto: String?) {
+        val ford = BitmapFactory.decodeResource(
+            resources,
+            R.mipmap.ford
+        )
+        val ford_raptor = BitmapFactory.decodeResource(
+            resources,
+            R.mipmap.ford_raptor
+        )
 
-            val channel = NotificationChannel(channelId, name, importance).apply { // (6)
-                description = descriptionText
-            }
+        val intent = Intent(this, Login::class.java)
+        intent.putExtra("cedula", cedula)
+        intent.putExtra("nombres", nombres)
+        intent.putExtra("email", email)
 
-            val nm: NotificationManager =
-                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager // (7)
-            nm.createNotificationChannel(channel) // (8)
+
+        val channelId = getString(R.string.user)
+        val notification = NotificationCompat.Builder(this, channelId)
+            .setSmallIcon(R.drawable.dashboard)
+            .setContentTitle(cedula)
+            .setContentText(nombres)
+            .setSubText(email)
+            .setStyle(
+                NotificationCompat.BigPictureStyle().bigPicture(ford).bigLargeIcon(ford_raptor)
+            )
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .build()
+        with(NotificationManagerCompat.from(this)) {
+            notify(1, notification)
         }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {   //(1)
+//            val name = getString(R.string.app_name)   // (2)
+//            val channelId = getString(R.string.user) // (3)
+//            val descriptionText = getString(R.string.dashboard) // (4)
+//            val importance = NotificationManager.IMPORTANCE_MAX // (5)
+//
+//            val channel = NotificationChannel(channelId, name, importance).apply { // (6)
+//                description = descriptionText
+//            }
+//
+//            val nm: NotificationManager =
+//                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager // (7)
+//            nm.createNotificationChannel(channel) // (8)
+//        }
     }
 }

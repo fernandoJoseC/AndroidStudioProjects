@@ -22,4 +22,10 @@ interface ApiService {
         @Body datos: TelefnoEnviar,
     ): Call<String>
 
+    @Headers("Content-Type: application/json")
+    @POST(value = "personas/buscar")
+    fun buscarPersona(
+        @Body datos: DatosEnviar,
+    ): Call<List<DatosUsuario>>
+
 }
